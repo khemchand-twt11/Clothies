@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+#GrandParent{
+    width:90%;
+    margin:200px auto;
+}
+#Parent{
+    width:60%;
+    margin:20px auto;
+}
+#Child{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 30px;
+    column-gap: 20px;
+    border:1px solid red;
+}
