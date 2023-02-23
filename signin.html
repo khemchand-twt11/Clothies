@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin</title>
+    <title>signin</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style/signin.css">
 </head>
 <body>
+   <form action="" id="LoginUser">
     <div class="grandParent">
 
         <div class="parent">
@@ -21,24 +22,25 @@
 
             <input type="text" name="Email" placeholder="Email" id="Email" required>
 
-            <input type="password"name="Password" placeholder="Password" id="Password" required minlength="4" maxlength="8">
+            <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,20}" required>
 
         </div>
 
         <div id="checkbox">
             
             <span><input type="checkbox" id="box"  />Keep me signed in</span>
-            <a href="" id="start" style="text-decoration: none;">Forgot password?</a>
+            <a href="" id="start" style="text-decoration: none;color:blue">Forgot password?</a>
         </div>
         </div>
         
         <div id="signin">
-            <button><span><i class="fa-solid fa-lock"></i></span> 
+            <button id="loginUser" type="submit"><span><i class="fa-solid fa-lock"></i></span> 
             <span>Sign in</span></button>
             <p style="color: #616161;"> <i >New to our site or enrolled in My Rewarding Moments™ in store?</i></p>
-            <button> Create Account</button>
+            <button id="CreateAccount"> Create Account</button>
         </div>
     </div>
+   </form>
     
 </body>
 <script src="./src/signin.js"></script>
