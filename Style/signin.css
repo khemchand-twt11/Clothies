@@ -2,79 +2,142 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 }
-.grandParent {
-  width: 70%;
-  margin: 200px auto;
+button{
+  cursor: pointer;
+}
+.grandParent{
+  width:70%;
+  margin:200px auto;
   height: 600px;
   /* border:2px solid red; */
   padding-left: 20px;
 }
-.parent {
-  width: 90%;
-  margin: auto;
-  /* border:2px solid blue; */
+.parent{
+  width:90%;
+  margin:auto;
+ 
 }
-.credential {
-  display: flex;
+/* credential for input tag */
+.credential{
+  display:flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  margin: auto;
+  width:100%;
+  margin:auto;
   /* border:2px solid red; */
+
 }
-#checkbox {
-  display: flex;
+/* checkbox and forgot password div */
+#checkbox{
+  display:flex;
   justify-content: space-between;
-  width: 100%;
-  margin: 15px auto;
-  /* border:2px solid green; */
+  width:100%;
+  margin:0px auto;
+  
 }
 
+/* to input of password and email */
 input[type="text"],
-input[type="password"] {
-  font-size: 17px;
-  width: 48%;
-  height: 50px;
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
+input[type="password"]{
+  font-size:17px;
+  width:48%;
+  height:50px;
+  padding:10px;
+  border-radius:4px;
+  border:none;
   margin-bottom: 20px;
-
+  
   box-sizing: border-box;
 }
 
-#signin {
-  display: flex;
-  flex-direction: column;
+/* sign in div */
+
+#signin{
+ display:flex;
+ flex-direction: column;
   width: 90%;
   margin: auto;
   margin-top: 50px;
-
-  align-items: center;
+ align-items: center;
 }
-#signin button {
-  /* color: rebeccapurple; */
-  width: 400px;
+/* to both button sigin and create account */
+#signin button{
+ 
+  width: 300px;
   font-size: 17px;
-  border: 1px solid black;
+  border:1px solid black;
   border-radius: 5px;
   padding: 8.5px 23px 8.5px 23px;
-  cursor: pointer;
+  
 }
-#signin > button:nth-child(1) {
-  background-color: #0a83bcda;
-  color: white;
-  border: none;
-  margin-bottom: 50px;
+/* sigin button style */
+#signin>button:nth-child(1){
+  background-color:#29B6F6 ;
+  color:white;
+  border:none;
+  margin-bottom:50px;
   font-weight: bold;
-  transition: transform 0.7s;
 }
-#signin > button:nth-child(1):hover {
-  background-color: #0081c9;
-  transform: scale(1.1);
+/* checkbox style */
+#box{
+  width:15px;
+  height:15px;
 }
-#box {
-  width: 15px;
+   /* Write all responsive here  */
+   @media only screen and (max-width: 1000px) {
+      /* Medium Screen  */
+      .credential{
+          display:block;
+          justify-content: space-between;
+          align-items: center;
+          width:100%;
+          margin:auto;
+          
+      
+      }
+      input[type="text"],
+      input[type="password"]{
+          display:block;
+          font-size:17px;
+          width:48%;
+          height:50px;
+          padding:10px;
+          border-radius:4px;
+          border:none;
+          margin-bottom: 20px;
+          
+          box-sizing: border-box;
+      }
+      #checkbox{
+          display:block;
+          flex-direction: row;
+          justify-content: space-between;
+          width:100%;
+          margin:0px auto;
+          
+      }
+      #signin{
+          display:block;
+          flex-direction: row;
+           width: 90%;
+           margin: auto;
+           margin-top: 50px;
+          
+          align-items: center;
+       }
+       #signin button{
+ 
+          width: 48%;
+          font-size: 17px;
+          border:1px solid black;
+          border-radius: 5px;
+          padding: 8.5px 23px 8.5px 23px;
+          
+      }
+      
+    }
 
-  height: 15px;
-}
+    @media only screen and (max-width: 600px) {
+      /* Small Screen  */
+      
+    }
