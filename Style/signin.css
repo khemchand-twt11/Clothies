@@ -36,6 +36,7 @@ button{
   
 }
 
+
 /* to input of password and email */
 input[type="text"],
 input[type="password"]{
@@ -45,6 +46,7 @@ input[type="password"]{
   padding:10px;
   border-radius:4px;
   border:none;
+
   margin-bottom: 20px;
   
   box-sizing: border-box;

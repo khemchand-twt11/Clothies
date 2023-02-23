@@ -1,13 +1,83 @@
 let mainSection = document.querySelector(".product-container");
+let sort_btn = document.getElementById("sort-btn");
+let sort_btn_li = document.querySelectorAll("#sort-btn ul li");
+let paginationWrapper = document.querySelector("#pagination-wrapper div");
+let favouriteData = JSON.parse(localStorage.getItem("favourite")) || [];
+let singleData = JSON.parse(localStorage.getItem("single"));
+let forUseData = [];
+//sorting low to high
+sort_btn_li[0].addEventListener("click", (e) => {
+  sortLowToHigh();
+});
+function sortLowToHigh() {
+  forUseData.sort((a, b) => Number(a.discountPrice) - Number(b.discountPrice));
+  renderCardList(forUseData);
+}
+//sorting high to low
+sort_btn_li[1].addEventListener("click", (e) => {
+  sortHighToLow();
+});
+
+//default
+sort_btn_li[2].addEventListener("click", (e) => {
+  fun();
+});
+function sortHighToLow() {
+  forUseData.sort((a, b) => Number(b.discountPrice) - Number(a.discountPrice));
+  renderCardList(forUseData);
+}
+const element = document.querySelector(".sort_arrow");
+sort_btn.addEventListener("click", function () {
+  const ul = document.querySelector("#sort-btn ul");
+  element.classList.toggle("active");
+  if (ul.style.display == "none") {
+    ul.style.display = "block";
+  } else {
+    ul.style.display = "none";
+  }
+});
 
 window.addEventListener("load", () => {
   fun();
 });
-async function fun() {
-  let res = await fetch("https://test-api-oqvk.onrender.com/cloth_data/");
+async function fun(limit = 1) {
+  let res = await fetch(
+    `https://test-api-oqvk.onrender.com/cloth_data?_limit=28&_page=${limit}`
+  );
+  const totalCount = res.headers.get("x-total-count");
   let data = await res.json();
   console.log(data);
   renderCardList(data);
+
+  createButtons(totalCount, 24);
+  eventToButtons();
+  forUseData = [...data];
+}
+function createButtons(totalCount, limit) {
+  const totalPages = Math.ceil(totalCount / limit);
+  //   const totalPages = Math.ceil(totalCount / 24);
+  paginationWrapper.innerHTML = paginationButtons(totalPages);
+}
+
+function paginationButtons(totalPages) {
+  let collectionOfButtons = [];
+  for (let i = 1; i <= totalPages; i++) {
+    collectionOfButtons.push(
+      `<button class="pagination-button" data-page-number="${i}">${i}</button>`
+    );
+  }
+  return collectionOfButtons.join("");
+}
+
+// click event of buttons
+function eventToButtons() {
+  let buttons = document.getElementsByClassName("pagination-button");
+
+  for (let val of buttons) {
+    val.addEventListener("click", (e) => {
+      fun(e.target.dataset.pageNumber);
+    });
+  }
 }
 
 function renderCardList(cardData) {
@@ -24,6 +94,13 @@ function renderCardList(cardData) {
     let mainCard = document.createElement("div");
     mainCard.setAttribute("data-id", element.id);
     mainCard.className = "main-card";
+
+    //redirecting to the single card page
+    mainCard.addEventListener("click", () => {
+      window.location.href = "single.html";
+      singleData = element;
+      localStorage.setItem("single", JSON.stringify(singleData));
+    });
 
     // top anchor for image
     let topAnchor = document.createElement("a");
@@ -56,6 +133,13 @@ function renderCardList(cardData) {
     let icon = document.createElement("i");
     icon.className = "far fa-heart";
 
+    //add event listerner to heart icon
+    icon.addEventListener("click", () => {
+      console.log(element);
+      favouriteData.push(element);
+      localStorage.setItem("favourite", JSON.stringify(favouriteData));
+    });
+
     // add the i element to your HTML document
 
     let priceAndFavourite = document.createElement("div");
@@ -63,11 +147,6 @@ function renderCardList(cardData) {
     let actualPriceSpan = document.createElement("span");
     actualPriceSpan.textContent = "$" + element.actualPrice;
 
-    // favouriteProductSpan.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   console.log("clicked by span");
-    // });
-    //discount
     let discount = document.createElement("span");
     discount.textContent = element.discount + "% off";
 
@@ -122,3 +201,5 @@ function renderCardList(cardData) {
   //      </div>
   //     `;
 }
+
+//
