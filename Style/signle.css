@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body {
+  margin-left: 0;
+  overflow-x: hidden;
+}
+
+.single-div {
+  display: flex;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
+}
+.single-div__first {
+  width: 60%;
+  /* background: #000; */
+}
+
+.single-div__second {
+  width: 40%;
+  /* background-color: red; */
+}
+.single-div__first > div > div {
+  display: flex;
+}
+.single-div__first > div > div > div:nth-child(1) {
+  width: 20%;
+  /* background-color: green; */
+  height: 85vh;
+}
+.single-div__first > div > div > div:nth-child(1) img {
+  width: 90%;
+}
+.single-div__first > div > div > div:nth-child(2) {
+  width: 80%;
+  /* background-color: blue; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image1 {
+  margin-top: 3.2rem;
+  /* background-color: teal; */
+}
+.image1 img {
+  border-bottom: 5px solid #00a9e0;
+  cursor: pointer;
+  border-radius: 0 0 0.2rem 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.image2 img {
+  cursor: pointer;
+}
+
+.image3 {
+  /* background-color: aqua; */
+  width: 95%;
+  height: 85vh;
+}
+.image3 img {
+  width: 100%;
+}
+
+.single-div__second > div > span:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+.single-div__second > div > span > span {
+  font-size: 5rem;
+  margin-right: 3rem;
+}
+.single-div__second > div > span > div {
+  font-size: 1.8rem;
+}
+
+.single-div__second > div > span:nth-child(1) {
+  font-size: 3rem;
+}
+.single-div__second > div > span:nth-child(2) {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+  display: inline-block;
+}
+
+.single-div__second > div:nth-child(3) {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.single-div__second > div:nth-child(3) a {
+  font-size: 1.8rem;
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+.single-div__second > div:nth-child(4) {
+  margin-bottom: 7rem;
+}
+.single-div__second > div:nth-child(4) button {
+  width: 6.4rem;
+  height: 3.4rem;
+  margin-right: 0.6rem;
+}
+.single-div__second > div:nth-child(5) {
+  background-color: red;
+  width: 60%;
+  margin: auto;
+}
+.single-div__second > div:nth-child(5) button {
+  width: 100%;
+}

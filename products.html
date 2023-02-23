@@ -27,22 +27,22 @@
       </div>
       <div class="main-container__second">
         <div class="sort-container">
-          <div class="sort-container__dropdown">
-            <div>
-              <p>Sort by <span>|Price</span></p>
-              <span>
-                <i class="fa-solid fa-angle-down"></i>
-              </span>
-            </div>
-            <ul>
-              <li><a href="#">Price Low to High</a></li>
-              <li><a href="#">Price High to Low</a></li>
-              <li><a href="#">Item 3</a></li>
+          <button id="sort-btn">
+            <span> Sort by | Price</span>
+            <span>
+              <i class="fa-solid fa-angle-down sort_arrow"></i>
+            </span>
+            <ul style="display: none">
+              <li data-LToH="1">Low to High</li>
+              <li data-HToL="2">High to Low</li>
+              <li data-HToL="2">Default</li>
             </ul>
-            <span class="sort-container__dropdown-arrow"></span>
-          </div>
+          </button>
         </div>
         <div class="product-container"></div>
+        <div id="pagination-wrapper">
+          <div></div>
+        </div>
       </div>
     </div>
   </body>

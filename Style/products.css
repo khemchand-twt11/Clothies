@@ -20,35 +20,53 @@ body {
   width: 82%;
 }
 .sort-container {
-  border: 1px solid red;
-}
-.sort-container__dropdown {
-  width: 15%;
-  font-size: 2.8rem;
-  background: red;
-  text-align: right;
-}
-
-.sort-container__dropdown > div {
   display: flex;
-  align-items: center;
-  border: 1px solid black;
-  height: 2.8rem;
-  border-radius: 0.4rem;
+  justify-content: flex-end;
 }
 
-.sort-container__dropdown ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin-left: 0.8rem;
+#sort-btn {
+  width: 16rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.8rem;
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  position: relative;
+}
+
+.sort_arrow {
+  transition: transform 0.4s;
+}
+.sort_arrow.active {
+  transform: rotate(180deg);
+}
+.sort-btn span:nth-child(1) {
+  margin-right: 0.4rem;
+  font-weight: 1000;
+}
+#sort-btn ul {
   display: none;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  padding-left: 0;
+  top: 1.2rem;
+  width: 16rem;
+  left: 0;
 }
-.sort-container__dropdown ul a {
-  text-decoration: none;
-  display: inline-block;
-  padding-top: 0.4rem;
-  color: black;
+#sort-btn ul li {
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
 }
+#sort-btn ul li:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
 .card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -115,5 +133,32 @@ body {
   font-size: 1.4rem;
 }
 
-/* 
-   */
+/* pagination */
+#pagination-wrapper {
+  /* border: 1px solid red; */
+}
+#pagination-wrapper div {
+  /* border: 1px solid black; */
+  width: 40%;
+  margin: auto;
+}
+
+#pagination-wrapper div button {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: 2.4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: darkblue;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 2rem;
+  background-color: white;
+}
+
+#pagination-wrapper div button:hover {
+  color: white;
+  background: #3498db;
+}
+
+/*  side bar */
