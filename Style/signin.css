@@ -30,7 +30,7 @@ body {
   /* border:2px solid green; */
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   font-size: 17px;
   width: 48%;

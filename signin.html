@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signin</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/signin.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style/signin.css" />
+  </head>
+  <body>
     <div class="grandParent">
-
-        <div class="parent">
-            <h1>Hi, welcome back!</h1>
+      <div class="parent">
+        <h1>Hi, welcome back!</h1>
 
         <div class="credential">
+          <input
+            type="email"
+            name="Email"
+            placeholder="Email"
+            id="Email"
+            required
+          />
 
-            <input type="text" name="Email" placeholder="Email" id="Email" required>
-
-            <input type="password"name="Password" placeholder="Password" id="Password" required minlength="4" maxlength="8">
-
+          <input
+            type="password"
+            name="Password"
+            placeholder="Password"
+            id="Password"
+            required
+            minlength="4"
+            maxlength="8"
+          />
         </div>
 
         <div id="checkbox">
-            
-            <span><input type="checkbox" id="box"  />Keep me signed in</span>
-            <a href="" id="start" style="text-decoration: none;">Forgot password?</a>
+          <span><input type="checkbox" id="box" />Keep me signed in</span>
+          <a href="" id="start" style="text-decoration: none"
+            >Forgot password?</a
+          >
         </div>
-        </div>
-        
-        <div id="signin">
-            <button><span><i class="fa-solid fa-lock"></i></span> 
-            <span>Sign in</span></button>
-            <p style="color: #616161;"> <i >New to our site or enrolled in My Rewarding Moments™ in store?</i></p>
-            <button> Create Account</button>
-        </div>
+      </div>
+
+      <div id="signin">
+        <button>
+          <span><i class="fa-solid fa-lock"></i></span> <span>Sign in</span>
+        </button>
+        <p style="color: #616161">
+          <i>New to our site or enrolled in My Rewarding Moments™ in store?</i>
+        </p>
+        <button>Create Account</button>
+      </div>
     </div>
-    
-</body>
-<script src="./src/signin.js"></script>
+  </body>
+  <script src="./src/signin.js"></script>
 </html>
