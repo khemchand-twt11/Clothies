@@ -250,14 +250,10 @@ a {
 }
 
 #midSection #advertise_3 {
-
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  column-gap: 10px;;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
   margin: 10px;
- 
-
-
 }
 
 /* #midSection #advertise_3 div {
@@ -273,27 +269,24 @@ a {
   background-color: white;
   text-align: center;
 }
-#midnav{
-  padding-top: 20px;;
-  width:80%;
-  margin:25px auto;
-  display:grid;
-  grid-template-columns: repeat(6,1fr);
-  column-gap: 8px;;
-  
-  
+#midSection #advertise_3 div img {
+  margin-bottom: 8px;
 }
-#midnav>button{
-  width:100%;
-  height:40px;
-  border:2px solid black;
+#midnav {
+  padding-top: 20px;
+  width: 80%;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 8px;
+}
+#midnav > button {
+  width: 100%;
+  height: 40px;
+  border: 2px solid black;
   border-radius: 5px;
-  padding:0px auto;
+  padding: 0px auto;
 }
-
-
-
-
 
 #midSection #midnav_2 {
   display: flex;
@@ -359,7 +352,7 @@ a {
   width: 100%;
 }
 
-@media (min-width: 300px) and (max-width: 700px) {
+@media (min-width: 300px) and (max-width: 965px) {
   /* … */
   #midSection #midnav {
     display: grid;
@@ -367,12 +360,12 @@ a {
     row-gap: 10px;
   }
 
-   #midnav>button{
-    width:90%;
-    height:30px;
-    border:2px solid black;
+  #midnav > button {
+    width: 90%;
+    height: 30px;
+    border: 2px solid black;
     border-radius: 5px;
-    padding:0px auto;
+    padding: 0px auto;
   }
 
   /* #midSection #midnav:hover {
@@ -388,11 +381,18 @@ a {
     scale: 1.02;
   } */
 
+  #midSection #advertise_3 {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
   #midSection #advertise_3 div {
     background-color: white;
     text-align: center;
     line-height: 12px;
     font-size: small;
+  }
+  #midSection #advertise_3 div img {
+    margin-bottom: 20px;
   }
 
   #midSection #midnav_2 div {
