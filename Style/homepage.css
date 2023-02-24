@@ -271,16 +271,18 @@ a {
 }
 
 #midSection #advertise_3 {
-  display: flex;
-  margin: 0px;
-  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 10px;;
+  margin: 10px;
+  /* padding: 0px; */
 
 }
 
-#midSection #advertise_3 div {
-  width: 33%;
+/* #midSection #advertise_3 div {
+  width: 32.5%;
   margin: auto;
-}
+} */
 
 #midSection #advertise_3 div img {
   width: 100%;
@@ -291,33 +293,49 @@ a {
   text-align: center;
 
 }
+#midnav{
+  padding-top: 20px;;
+  width:80%;
+  margin:25px auto;
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  column-gap: 8px;;
+  
+  
+}
+#midnav>button{
+  width:100%;
+  height:40px;
+  border:2px solid black;
+  border-radius: 5px;
+  padding:0px auto;
+}
 
-
-#midSection #midnav h3 {
+/* #midSection #midnav h3 {
   width: 120px;
   height: 30px;
   font-size: small;
   border: 2px solid silver;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
-  padding-top: 10px;
-}
+  padding: 10px auto;
+} */
 
-#midSection #midnav h3:hover {
+/* #midSection #midnav h3:hover {
   width: 120px;
   height: 30px;
   scale: 1.1;
   border: 2px solid silver;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
-}
+} */
 
-#midSection #midnav {
+/* #midSection #midnav {
   display: flex;
   width: 80%;
   margin: 3% 10%;
   justify-content: space-around;
-}
+} */
 
 
 #midSection #midnav_2 {
@@ -389,15 +407,18 @@ a {
   #midSection #midnav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
   }
 
-  #midSection #midnav h3 {
-    width: 80px;
-    height: 20px;
-    padding-bottom: 6px;
+   #midnav>button{
+    width:90%;
+    height:30px;
+    border:2px solid black;
+    border-radius: 5px;
+    padding:0px auto;
   }
 
-  #midSection #midnav:hover {
+  /* #midSection #midnav:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     scale: 1.02;
@@ -408,7 +429,7 @@ a {
     height: 20px;
     padding-bottom: 6px;
     scale: 1.02;
-  }
+  } */
 
   #midSection #advertise_3 div {
     background-color: white;
