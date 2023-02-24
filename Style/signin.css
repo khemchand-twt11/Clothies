@@ -2,144 +2,131 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f2f2f2;
 }
-button{
+button {
   cursor: pointer;
 }
-.grandParent{
-  width:70%;
-  margin:200px auto;
+.grandParent {
+  width: 70%;
+  margin: 200px auto;
   height: 600px;
   /* border:2px solid red; */
   padding-left: 20px;
 }
-.parent{
-  width:90%;
-  margin:auto;
- 
+.parent {
+  width: 90%;
+  margin: auto;
 }
 /* credential for input tag */
-.credential{
-  display:flex;
+.credential {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width:100%;
-  margin:auto;
+  width: 100%;
+  margin: auto;
   /* border:2px solid red; */
-
 }
 /* checkbox and forgot password div */
-#checkbox{
-  display:flex;
+#checkbox {
+  display: flex;
   justify-content: space-between;
-  width:100%;
-  margin:0px auto;
-  
+  width: 100%;
+  margin: 0px auto;
 }
-
 
 /* to input of password and email */
 input[type="text"],
-input[type="password"]{
-  font-size:17px;
-  width:48%;
-  height:50px;
-  padding:10px;
-  border-radius:4px;
-  border:none;
+input[type="password"] {
+  font-size: 17px;
+  width: 48%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
 
   margin-bottom: 20px;
-  
+
   box-sizing: border-box;
 }
 
 /* sign in div */
 
-#signin{
- display:flex;
- flex-direction: column;
+#signin {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   margin: auto;
   margin-top: 50px;
- align-items: center;
+  align-items: center;
 }
 /* to both button sigin and create account */
-#signin button{
- 
+#signin button {
   width: 300px;
   font-size: 17px;
-  border:1px solid black;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 8.5px 23px 8.5px 23px;
-  
 }
 /* sigin button style */
-#signin>button:nth-child(1){
-  background-color:#29B6F6 ;
-  color:white;
-  border:none;
-  margin-bottom:50px;
+#signin > button:nth-child(1) {
+  background-color: #29b6f6;
+  color: white;
+  border: none;
+  margin-bottom: 50px;
   font-weight: bold;
 }
 /* checkbox style */
-#box{
-  width:15px;
-  height:15px;
+#box {
+  width: 15px;
+  height: 15px;
 }
-   /* Write all responsive here  */
-   @media only screen and (max-width: 1000px) {
-      /* Medium Screen  */
-      .credential{
-          display:block;
-          justify-content: space-between;
-          align-items: center;
-          width:100%;
-          margin:auto;
-          
-      
-      }
-      input[type="text"],
-      input[type="password"]{
-          display:block;
-          font-size:17px;
-          width:48%;
-          height:50px;
-          padding:10px;
-          border-radius:4px;
-          border:none;
-          margin-bottom: 20px;
-          
-          box-sizing: border-box;
-      }
-      #checkbox{
-          display:block;
-          flex-direction: row;
-          justify-content: space-between;
-          width:100%;
-          margin:0px auto;
-          
-      }
-      #signin{
-          display:block;
-          flex-direction: row;
-           width: 90%;
-           margin: auto;
-           margin-top: 50px;
-          
-          align-items: center;
-       }
-       #signin button{
- 
-          width: 48%;
-          font-size: 17px;
-          border:1px solid black;
-          border-radius: 5px;
-          padding: 8.5px 23px 8.5px 23px;
-          
-      }
-      
-    }
+/* Write all responsive here  */
+@media only screen and (max-width: 1000px) {
+  /* Medium Screen  */
+  .credential {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    font-size: 17px;
+    width: 48%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 20px;
 
-    @media only screen and (max-width: 600px) {
-      /* Small Screen  */
-      
-    }
+    box-sizing: border-box;
+  }
+  #checkbox {
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px auto;
+  }
+  #signin {
+    display: block;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+
+    align-items: center;
+  }
+  #signin button {
+    width: 48%;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8.5px 23px 8.5px 23px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Small Screen  */
+}
