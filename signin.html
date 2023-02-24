@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signin</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./style/signin.css">
-</head>
-<body>
-   <form action="" id="LoginUser">
-    <div class="grandParent">
-
+    <link rel="stylesheet" href="./style/signin.css" />
+  </head>
+  <body>
+    <form action="" id="LoginUser">
+      <div class="grandParent">
         <div class="parent">
-            <h1>Hi, welcome back!</h1>
+          <h1>Hi, welcome back!</h1>
 
-        <div class="credential">
+          <div class="credential">
+            <input
+              type="text"
+              name="Email"
+              placeholder="Email"
+              id="Email"
+              required
+            />
 
-            <input type="text" name="Email" placeholder="Email" id="Email" required>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              pattern="(?=.\d)(?=.[a-zA-Z]).{8,20}"
+              required
+            />
+          </div>
 
-            <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.\d)(?=.[a-zA-Z]).{8,20}" required>
-
+          <div id="checkbox">
+            <span><input type="checkbox" id="box" />Keep me signed in</span>
+            <a href="" id="start" style="text-decoration: none; color: blue"
+              >Forgot password?</a
+            >
+          </div>
         </div>
 
-        <div id="checkbox">
-            
-            <span><input type="checkbox" id="box"  />Keep me signed in</span>
-            <a href="" id="start" style="text-decoration: none;color:blue">Forgot password?</a>
-        </div>
-        </div>
-        
         <div id="signin">
-            <button id="loginUser" type="submit"><span><i class="fa-solid fa-lock"></i></span> 
-            <span>Sign in</span></button>
-            <p style="color: #616161;"> <i >New to our site or enrolled in My Rewarding Moments™ in store?</i></p>
-            <button id="CreateAccount"> Create Account</button>
+          <button id="loginUser" type="submit">
+            <span><i class="fa-solid fa-lock"></i></span> <span>Sign in</span>
+          </button>
+          <p style="color: #616161">
+            <i
+              >New to our site or enrolled in My Rewarding Moments™ in store?</i
+            >
+          </p>
+          <button id="CreateAccount">Create Account</button>
         </div>
-    </div>
-   </form>
-    
-</body>
-<script src="./src/signin.js"></script>
+      </div>
+    </form>
+
+    <!-- footer start here  -->
+  </body>
+  <script src="./src/signin.js"></script>
 </html>
