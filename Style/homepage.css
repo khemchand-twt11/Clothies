@@ -343,7 +343,6 @@ a {
   /* padding-bottom: 20px; */
   /* flex-wrap: wrap; */
   gap: 2%;
-  border-bottom: 2px solid red;
 }
 #midSection #ourfav > div {
   width: 16%;
@@ -351,6 +350,15 @@ a {
 #midSection #ourfav img {
   width: 100%;
 }
+
+#midSection #discover_1{
+  display: flex;
+  
+  }
+#midSection #discover_1 div img{
+  width: 100%;
+}
+
 
 @media (min-width: 300px) and (max-width: 965px) {
   /* … */
