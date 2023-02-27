@@ -13,7 +13,7 @@ clothie's is a baby clothing website where you can buy different variety of prod
 - Browser LocalStorage for Frontend
 - json server for data flow
 
-- [LIVE DEMO](https://nordstrom-cloned.herokuapp.com/)
+- [LIVE DEMO]([https://nordstrom-cloned.herokuapp.com/](https://genuine-gaufre-964df3.netlify.app/))
 
 ## Installing and Running
 
