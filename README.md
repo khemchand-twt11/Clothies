@@ -36,7 +36,7 @@ To run this application on your local system, execute the following commands on 
 
 ## Screenshots
 
-<!-- --- -->
+<!-- --- 
 
 A glimpse of our website
 
@@ -67,7 +67,7 @@ A glimpse of our website
 - On My Account page user can change their addres and the password if they need
 
 - ![My Account](https://user-images.githubusercontent.com/87421863/135756494-f0e72fdd-fbf0-41a9-ab37-d629f43ada39.png)
-
+-->
 ## Contributors
 
 1. [Khemchand](https://github.com/khemchand-twt11)
