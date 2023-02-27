@@ -1,0 +1,225 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+body {
+  margin-left: 0;
+  overflow-x: hidden;
+}
+
+.main-container {
+  display: flex;
+  height: 120vh;
+}
+.main-container__first {
+  width: 15%;
+  /* background: teal; */
+  margin-right: 3.2rem;
+  padding-left: 2.2rem;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 7px 8px 0px; */
+  height: 110vh;
+}
+
+.main-product-category {
+  /* display: none; */
+  margin: auto;
+}
+.main-product-category h3 {
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 2.4rem;
+  border-top: 2px solid gainsboro;
+  border-bottom: 2px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.main-product-category i {
+  font-size: 1.6rem;
+  padding-top: 1rem;
+}
+.main-product-category .sub-product-category label {
+  font-size: 1.8rem;
+  padding-top: 1.2rem;
+  vertical-align: middle;
+}
+.main-product-category .sub-product-category label {
+  cursor: pointer;
+}
+.main-product-category .sub-product-category input[type="checkbox"] {
+  display: inline-block;
+  margin: 1.2rem 1.4rem 1.2rem 2.4rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.sub-product-category {
+  display: none;
+}
+.main-product-category .fas {
+  transition: transform 0.4s;
+}
+.main-product-category .fas.active {
+  transform: rotate(180deg);
+}
+
+/*  second container  */
+.main-container__second {
+  width: 85%;
+}
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sort-btn {
+  width: 16rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.8rem;
+  display: flex;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  position: relative;
+  z-index: 1;
+}
+
+.sort_arrow {
+  transition: transform 0.4s;
+}
+.sort_arrow.active {
+  transform: rotate(180deg);
+}
+.sort-btn span:nth-child(1) {
+  margin-right: 0.4rem;
+  font-weight: 1000;
+}
+#sort-btn ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  padding-left: 0;
+  top: 3rem;
+  width: 16rem;
+  left: 0;
+}
+#sort-btn ul li {
+  padding: 1.2rem 0;
+  font-size: 1.6rem;
+}
+#sort-btn ul li:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+.product-container {
+  height: 100vh;
+  overflow-y: auto;
+  z-index: -1;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  row-gap: 4.8rem;
+  column-gap: 3rem;
+}
+.main-card {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+}
+.main-card:hover {
+  cursor: pointer;
+}
+.card {
+  border: 1px solid white;
+  padding: 0px 1.5rem;
+  height: 500px;
+}
+
+.top-anchor {
+  text-decoration: dashed;
+}
+.top-anchor > img {
+  width: 100%;
+  display: block;
+}
+
+.top-anchor + div {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed black;
+  padding-top: 1.2rem;
+  font-size: 2rem;
+  /* padding-bottom: rem; */
+}
+.top-anchor + div > span:nth-child(1) {
+  font-weight: 900;
+}
+.top-anchor + div > span:nth-child(2) {
+  font-size: larger;
+}
+
+.bottom-anchor {
+  text-decoration: none;
+}
+
+.bottom-anchor span {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: lighter;
+  padding: 0 0.3rem;
+}
+
+.bottom-anchor span:nth-child(1) {
+  text-decoration: line-through;
+}
+.bottom-anchor h2 {
+  font-size: 1.8rem;
+  color: black;
+}
+.bottom-anchor p {
+  font-size: 1.4rem;
+}
+
+/* pagination */
+#pagination-wrapper {
+  height: 20px;
+  /* border: 1px solid black; */
+}
+#pagination-wrapper div {
+  /* border: 1px solid black; */
+  width: 40%;
+  margin: auto;
+  display: flex;
+}
+
+#pagination-wrapper div button {
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: 2.4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: darkblue;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 2rem;
+  background-color: white;
+}
+
+#pagination-wrapper div button:hover {
+  color: white;
+  background: #3498db;
+}
+
+/*  side bar */
+
+footer {
+  z-index: 1000;
+}
