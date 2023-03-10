@@ -21,7 +21,7 @@ clothie's is a baby clothing website where you can buy different variety of prod
 
 To run this application on your local system, execute the following commands on your terminal/command line:
 
-<code>git clone https://github.com/akhilsdeportfolio/construct_week_2.git</code>
+<code>git clone https://github.com/khemchand-twt11/hallowed-key-8078.git</code>
 
 ## Features
 
