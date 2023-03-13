@@ -34,7 +34,7 @@ To run this application on your local system, execute the following commands on 
 - cart page that will change dynamically according to the products avilable on cart.
 - Checkout page which calculates the shipping prices dynamically.
 
-## Screenshots
+
 
 <!-- --- 
 
